@@ -1,6 +1,8 @@
-# Listas de atividades
+# Atlantis
 
 > Aluna: Mariana Izumi - 3DSM
+>
+> Professor: Gerson Penha
 
 
 Repositório para armazenar todas as listas elaboradas para a matéria Técnicas de Programação II.
