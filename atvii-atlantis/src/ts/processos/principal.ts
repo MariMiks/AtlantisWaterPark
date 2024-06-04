@@ -37,6 +37,7 @@ export default class Principal extends Processo {
                 // - dependente
                 this.processo = new TipoExcluirClientes()
                 this.processo.processar()
+                break
             case 0:
                 this.execucao = false
                 console.log('Até logo!')

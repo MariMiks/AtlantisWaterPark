@@ -13,14 +13,15 @@ export default class ImpressorClienteSimples implements Impressor {
     }
 
     imprimir(): string {
-        let impressao =  `| ${this.index}\n`
+        let impressao =  `----------------------\n`
+            + `| ${this.index}) \n`
             + `| Nome: ${this.cliente.Nome}\n`
             + `| Nome social: ${this.cliente.NomeSocial}\n`
 
         this.impressor = new ImpressorDocumentos(this.cliente.Documentos)
         impressao = impressao + `\n${this.impressor.imprimir()}`
 
-        impressao = impressao + `\n****************************`
+        impressao = impressao + `\n----------------------\n`
         return impressao
     }
 
