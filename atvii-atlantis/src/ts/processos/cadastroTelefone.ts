@@ -12,7 +12,7 @@ export default class CadastroTelefone extends Processo {
 
     processar(): void {
         let ddd = this.entrada.receberTexto('Qual o ddd?')
-        let numero = this.entrada.receberTexto('Qual o numero?')
+        let numero = this.entrada.receberTexto('Qual o número?')
 
         let telefone = new Telefone(ddd, numero)
         this.cliente.Telefones.push(telefone)

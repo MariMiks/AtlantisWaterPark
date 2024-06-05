@@ -2,6 +2,7 @@ import Processo from "../abstracoes/processo";
 import MenuTelefone from "../menus/menuTelefone";
 import Cliente from "../modelos/cliente";
 import CadastroDocumento from "./cadastroDocumento";
+import CadastroTelefone from "./cadastroTelefone";
 
 export default class CadastrarTelefonesCliente extends Processo {
     private cliente: Cliente
@@ -19,7 +20,7 @@ export default class CadastrarTelefonesCliente extends Processo {
             this.opcao = this.entrada.receberNumero('Qual opção desejada?')
             switch (this.opcao) {
                 case 1:
-                    this.processo = new CadastrarTelefonesCliente(this.cliente)
+                    this.processo = new CadastroTelefone(this.cliente)
                     this.processo.processar()
                     break
                 case 0:

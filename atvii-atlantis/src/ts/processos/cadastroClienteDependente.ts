@@ -5,6 +5,7 @@ import Impressor from "../interfaces/impressor"
 import Cliente from "../modelos/cliente"
 import Endereco from "../modelos/endereco"
 import CadastrarDocumentosCliente from "./cadastrarDocumentosCliente"
+import CadastrarTelefonesCliente from "./cadastrarTelefonesCliente"
 
 export default class CadastroClienteDependente extends Processo {
     private clientes: Cliente[]
@@ -41,6 +42,9 @@ export default class CadastroClienteDependente extends Processo {
                     let dependente = new Cliente(nome, nomeSocial, dataNascimento)
 
                     dependente.Endereco = this.clientes[i].Endereco.clonar() as Endereco
+
+                    this.processo = new CadastrarTelefonesCliente(dependente)
+                    this.processo.processar()
 
                     this.processo = new CadastrarDocumentosCliente(dependente)
                     this.processo.processar()
