@@ -27,7 +27,7 @@ export default class ListagemDependentesTitular extends Processo {
         })
         console.log('****************************')
         console.log('Por favor escolha um dos titulares pré-cadastrados')
-        let titular = this.entrada.receberTexto('Qual o número de documento do titular desejado? ')
+        let titular = this.entrada.receberTexto('Número de documento do cliente desejado: ')
 
         for (let i = 0; i < this.clientes.length; i++) {
             for (let idoc = 0; idoc < this.clientes[i].Documentos.length; idoc++) {
