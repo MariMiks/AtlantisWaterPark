@@ -30,7 +30,7 @@ export default class CadastroClienteDependente extends Processo {
         })
 
         console.log('****************************\n')
-
+        console.log('Por favor escolha um dos titulares pré-cadastrados')
         let titular = this.entrada.receberTexto('Qual o número de documento do titular relacionado? ')
 
         for (let i = 0; i < this.clientes.length; i++) {
