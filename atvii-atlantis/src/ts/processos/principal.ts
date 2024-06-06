@@ -1,6 +1,7 @@
 import Processo from "../abstracoes/processo"
 import MenuPrincipal from "../menus/menuPricipal"
 import TipoCadastroCliente from "./tipos/tipoCadastroCliente"
+import TipoEditarClientes from "./tipos/tipoEditarCliente"
 import TipoExcluirClientes from "./tipos/tipoExcluirClientes"
 import TipoListagemClientes from "./tipos/tipoListagemClientes"
 
@@ -19,12 +20,8 @@ export default class Principal extends Processo {
                 this.processo.processar()
                 break
             case 2:
-                // editar cliente
-                // criar TipoEditarCliente -> escolher entre:
-                // - todos
-                // - um titular especifico (seus dependentes)
-                // - um dependente (seu titular)
-                console.log('Editar cliente ainda não existe!!')
+                this.processo = new TipoEditarClientes()
+                this.processo.processar()
                 break
             case 3:
                 this.processo = new TipoListagemClientes()

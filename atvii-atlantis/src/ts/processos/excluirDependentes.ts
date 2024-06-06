@@ -36,7 +36,7 @@ export default class ExcluirDependentes extends Processo {
                 for (let idoc = 0; idoc < dependente.Documentos.length; idoc++) {
                     if (documento == dependente.Documentos[idoc].Numero) {
                         this.clientes[i].Dependentes.splice(idep, 1)
-                        console.log('Titular excluído com sucesso!')
+                        console.log('Dependente excluído com sucesso!')
                         break
                     }
                 }
