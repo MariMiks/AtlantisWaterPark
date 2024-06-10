@@ -41,7 +41,7 @@ export default class CadastroClienteDependente extends Processo {
                     let dataNascimento = this.entrada.receberData('Qual a data de nascimento?')
                     let dependente = new Cliente(nome, nomeSocial, dataNascimento)
 
-                    dependente.Endereco = this.clientes[i].Endereco.clonar() as Endereco
+                    dependente.setEndereco = this.clientes[i].Endereco.clonar() as Endereco
 
                     this.processo = new CadastrarTelefonesCliente(dependente)
                     this.processo.processar()

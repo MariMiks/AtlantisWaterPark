@@ -1,3 +1,4 @@
+import Dados from "../interfaces/dados"
 import Menu from "../interfaces/menu"
 import Entrada from "../io/entrada"
 

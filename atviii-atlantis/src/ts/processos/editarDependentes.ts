@@ -44,12 +44,12 @@ export default class EditarDependentes extends Processo {
 
                         switch (this.opcao) {
                             case 1:
-                                let novoNome = this.entrada.receberTexto('| Insira um novo nome:')
-                                dependente.Nome = novoNome
+                                let novoNome = this.entrada.receberTexto('Insira um novo nome:')
+                                dependente.setNome = novoNome
                                 break
                             case 2:
-                                let novoNomeSocial = this.entrada.receberTexto('| Insira um novo nome social:')
-                                dependente.NomeSocial = novoNomeSocial
+                                let novoNomeSocial = this.entrada.receberTexto('Insira um novo nome social:')
+                                dependente.setNomeSocial = novoNomeSocial
                                 break
                             case 3:
                                 console.log('Carregando todos os telefones deste dependente...')

@@ -43,11 +43,11 @@ export default class EditarTitularess extends Processo {
                     switch (this.opcao) {
                         case 1:
                             let novoNome = this.entrada.receberTexto('| Insira um novo nome:')
-                            titular.Nome = novoNome
+                            titular.setNome = novoNome
                             break
                         case 2:
                             let novoNomeSocial = this.entrada.receberTexto('| Insira um novo nome social:')
-                            titular.NomeSocial = novoNomeSocial
+                            titular.setNomeSocial = novoNomeSocial
                             break
                         case 3:
                             console.log('Coletando os dados do novo endereço...')
@@ -58,7 +58,7 @@ export default class EditarTitularess extends Processo {
                             let novoPais = this.entrada.receberTexto('| Insira novo pais:')
                             let novoCodigoPostal = this.entrada.receberTexto('| Insira novo código postal:')
                             let novoEndereco = new Endereco(novaRua, novoBairro, novaCidade, novoEstado, novoPais, novoCodigoPostal)
-                            titular.Endereco = novoEndereco
+                            titular.setEndereco = novoEndereco
                             break
                         case 4:
                             console.log('Carregando todos os telefones deste titular...')

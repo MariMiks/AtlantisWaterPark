@@ -1,4 +1,5 @@
 import Processo from "../abstracoes/processo"
+import GerarClientes from "../dominio/gerarClientes"
 import MenuPrincipal from "../menus/menuPricipal"
 import ListagemAcomodacoes from "./listagemAcomodacoes"
 import TipoCadastroCliente from "./tipos/tipoCadastroCliente"
@@ -35,9 +36,10 @@ export default class Principal extends Processo {
             case 5:
                 this.processo = new ListagemAcomodacoes()
                 this.processo.processar()
+                break
             case 0:
-                this.execucao = false
                 console.log('Até logo!')
+                this.execucao = false
                 console.clear()
                 break
             default:
