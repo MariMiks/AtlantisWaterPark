@@ -1,5 +1,6 @@
 import Impressor from "../interfaces/impressor";
 import Cliente from "../modelos/cliente";
+import ImpressorClienteSimples from "./impressorClienteSimples";
 import ImpressorDocumentos from "./impressorDocumentos";
 import ImpressorEndereco from "./impressorEndereco";
 import ImpressorTelefones from "./impressorTelefones";
@@ -27,6 +28,12 @@ export default class ImpressorCliente implements Impressor {
 
         this.impressor = new ImpressorTelefones(this.cliente.Telefones)
         impressao = impressao + `\n${this.impressor.imprimir()}`
+
+        let i = 1
+        this.cliente.Dependentes.forEach(dependente => {
+            this.impressor = new ImpressorClienteSimples(dependente, i++)
+            impressao = impressao + `| ----- Dependente: -----\n` + `${this.impressor.imprimir()}`
+        })
 
         impressao = impressao + `\n****************************`
         return impressao

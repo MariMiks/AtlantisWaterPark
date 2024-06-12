@@ -1,4 +1,5 @@
 import { NomeAcomadacao } from "../enumeracoes/NomeAcomodacao"
+import Cliente from "./cliente"
 
 export default class Acomodacao {
     private nomeAcomadacao: NomeAcomadacao
@@ -7,6 +8,7 @@ export default class Acomodacao {
     private suite: Number
     private climatizacao: Boolean
     private garagem: Number
+    private clientes: Cliente[] = []
 
     constructor(nomeAcomadacao: NomeAcomadacao, camaSolteiro: Number, camaCasal: Number,
         suite: Number, climatizacao: Boolean, garagem: Number) {
@@ -24,5 +26,6 @@ export default class Acomodacao {
     public get Suite() { return this.suite }
     public get Climatizacao() { return this.climatizacao }
     public get Garagem() { return this.garagem }
+    public get Clientes() { return this.clientes }
 
 }
