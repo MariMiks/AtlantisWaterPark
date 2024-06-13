@@ -1,16 +1,18 @@
 import Processo from "../abstracoes/processo";
 import Armazem from "../dominio/armazem";
-import ImpressorCliente from "../impressores/impressorCliente";
+import ImpressorAcomodacao from "../impressores/impressorAcomodacao";
+import ImpressorClienteSimples from "../impressores/impressorClienteSimples";
 import Impressor from "../interfaces/impressor";
 import Acomodacao from "../modelos/acomodacao";
 import Cliente from "../modelos/cliente";
+import VincularAcomodacao from "./vincularAcomodacao";
 
-export default class CadastroAcomodacaoCliente extends Processo{
+export default class VincularAcomodacaoCliente extends Processo {
     private clientes: Cliente[]
     private acomodacoes: Acomodacao[]
     private impressor!: Impressor
 
-    constructor(){
+    constructor() {
         super()
         this.clientes = Armazem.InstanciaUnica.Clientes
         this.acomodacoes = Armazem.InstanciaUnica.Acomodacoes
@@ -21,11 +23,11 @@ export default class CadastroAcomodacaoCliente extends Processo{
 
         console.log('Carregando todos os clientes titulares...')
         console.log('****************************')
-        
-        let i = 1
+
+        let icli = 1
         this.clientes.forEach(cliente => {
             if (this.titular(cliente)) {
-                this.impressor = new ImpressorCliente(cliente)
+                this.impressor = new ImpressorClienteSimples(cliente, icli++)
                 console.log(this.impressor.imprimir())
             }
         })
@@ -34,18 +36,14 @@ export default class CadastroAcomodacaoCliente extends Processo{
         console.log('Por favor escolha um dos titulares pré-cadastrados')
         let titular = this.entrada.receberTexto('Qual o número de documento do titular relacionado? ')
 
-        console.log('Carregando todas as acomodações...')
-        console.log('****************************')
-
-        console.log('****************************\n')
-        console.log('Por favor escolha uma das acomodações pré-cadastrados')
-
+        
         for (let i = 0; i < this.clientes.length; i++) {
             for (let idoc = 0; idoc < this.clientes[i].Documentos.length; idoc++) {
-                if (titular == this.clientes[i].Documentos[idoc].Numero) {
+                let clienteTitular = this.clientes[i]
+                if (titular == clienteTitular.Documentos[idoc].Numero) {
                     
-
-                    console.log('Finalizando escolha de acomodação...')
+                    this.processo = new VincularAcomodacao(clienteTitular)
+                    this.processo.processar()
                 }
             }
         }

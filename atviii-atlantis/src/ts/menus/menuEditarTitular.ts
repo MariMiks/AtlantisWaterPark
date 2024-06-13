@@ -11,6 +11,7 @@ export default class MenuEditarTitular implements Menu {
         console.log(`| 3 - Endereço`)
         console.log(`| 4 - Telefones`)
         console.log(`| 5 - Documentos`)
+        console.log(`| 6 - Acomodação`)
         console.log(`| 0 - Finalizar edição do titular`)
         console.log(`----------------------`)
     }

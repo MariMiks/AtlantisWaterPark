@@ -13,7 +13,7 @@ export default class ImpressorTelefones implements Impressor {
     imprimir(): string {
         let impressao = ``
         for (let index = 0; index < this.telefones.length; index++) {
-            this.impressor = new ImpressorTelefone(this.telefones[index])
+            this.impressor = new ImpressorTelefone(this.telefones[index], index+1)
             if (index == 0) {
                 impressao = impressao + `${this.impressor.imprimir()}`
             } else {

@@ -16,9 +16,11 @@ export default class ImpressorClienteSimples implements Impressor {
         let impressao =  `| ${this.index}) \n`
             + `| Nome: ${this.cliente.Nome}\n`
             + `| Nome social: ${this.cliente.NomeSocial}`
-
-        this.impressor = new ImpressorDocumentos(this.cliente.Documentos)
-        impressao = impressao + `\n${this.impressor.imprimir()}`
+            + `\n  | ----- Documentos: -----`
+        
+        for (let idoc = 0; idoc < this.cliente.Documentos.length; idoc++){
+            impressao = impressao + `\n  | ${idoc+1})\n` + `  | ${this.cliente.Documentos[idoc].Tipo}\n` + `  | ${this.cliente.Documentos[idoc].Numero}`
+        }
 
         impressao = impressao + `\n----------------------\n`
         return impressao

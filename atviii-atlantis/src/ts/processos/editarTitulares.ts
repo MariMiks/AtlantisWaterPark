@@ -7,6 +7,7 @@ import Cliente from "../modelos/cliente";
 import Documento from "../modelos/documento";
 import Endereco from "../modelos/endereco";
 import Telefone from "../modelos/telefone";
+import VincularAcomodacao from "./vincularAcomodacao";
 
 export default class EditarTitularess extends Processo {
     private clientes: Cliente[]
@@ -101,6 +102,10 @@ export default class EditarTitularess extends Processo {
                                     break
                                 }
                             }
+                            break
+                        case 6:
+                            this.processo = new VincularAcomodacao(titular)
+                            this.processo.processar()
                             break
                         default:
                             console.log('Opção não entendida :(')

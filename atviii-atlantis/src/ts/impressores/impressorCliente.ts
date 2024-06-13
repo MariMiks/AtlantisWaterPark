@@ -19,21 +19,30 @@ export default class ImpressorCliente implements Impressor {
             + `| Nome social: ${this.cliente.NomeSocial}\n`
             + `| Data de nascimento: ${this.cliente.DataNascimento.toLocaleDateString()}\n`
             + `| Data de cadastro: ${this.cliente.DataCadastro.toLocaleDateString()}`
+            + `\n|`
 
         this.impressor = new ImpressorEndereco(this.cliente.Endereco)
-        impressao = impressao + `\n${this.impressor.imprimir()}`
+        impressao = impressao + `\n${this.impressor.imprimir()}` + `\n|`
 
         this.impressor = new ImpressorDocumentos(this.cliente.Documentos)
-        impressao = impressao + `\n${this.impressor.imprimir()}`
+        impressao = impressao + `\n| ----- Documentos: -----` + `\n${this.impressor.imprimir()}` + `\n|`
 
         this.impressor = new ImpressorTelefones(this.cliente.Telefones)
-        impressao = impressao + `\n${this.impressor.imprimir()}`
+        impressao = impressao + `\n| ----- Telefones: -----` + `\n${this.impressor.imprimir()}` + `\n|`
 
         let i = 1
         this.cliente.Dependentes.forEach(dependente => {
             this.impressor = new ImpressorClienteSimples(dependente, i++)
-            impressao = impressao + `| ----- Dependente: -----\n` + `${this.impressor.imprimir()}`
+            impressao = impressao + `\n| ----- Dependentes: -----` + `\n${this.impressor.imprimir()}`
         })
+
+        if(this.cliente.Acomodacao != null){
+            impressao = impressao 
+                        + `| ----- Acomodação alocada: -----\n` 
+                        + `| ${this.cliente.Acomodacao.NomeAcomadacao}\n`
+        } else{
+            impressao = impressao + `| ----- Acomodação alocada: -----\n` + `| Ainda não foi alocado`
+        }
 
         impressao = impressao + `\n****************************`
         return impressao
