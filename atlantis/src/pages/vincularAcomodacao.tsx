@@ -4,18 +4,24 @@ import CarouselAcomodacao from '../components/Carousel'
 import Titulo from '../components/Titulo'
 import TitularModal from '../components/TitularModal'
 
-import ocean1 from "../assets/imgs/ocean-adobe.jpg"
-import ocean2 from "../assets/imgs/ocean-freepik.jpg"
-import ocean3 from "../assets/imgs/ocean-pngtree.png"
+import almofada from "../assets/imgs/almofadaBranca.jpg"
+import FamiliaSuper from "../assets/imgs/FamiliaSuper.avif"
+import SolteiroMais from '../assets/imgs/solteiroMais.jpg'
+import CasalSimples from '../assets/imgs/casalSimples.jpg'
+import naoPerturbe from '../assets/imgs/naoperturbe.jpg'
+import Solteiro from '../assets/imgs/solteiro.jpg'
+import FamiliaMais from '../assets/imgs/familiaMais.jpg'
+import FamiliaSimples from '../assets/imgs/familiaSimples.jpg'
+
 
 export default function VincularAcomodacao() {
     const acomodacao = localStorage.getItem("acomodacao")
-    const familiaSuper = [ocean1, ocean2, ocean3]
-    const familiaMais = [ocean1, ocean2, ocean3]
-    const familiaSimples = [ocean1, ocean2, ocean3]
-    const casalSimples = [ocean1, ocean2, ocean3]
-    const solterioMais = [ocean1, ocean2, ocean3]
-    const solterioSimples = [ocean1, ocean2, ocean3]
+    const familiaSuper = [FamiliaSuper, almofada, naoPerturbe]
+    const familiaMais = [FamiliaMais, almofada, naoPerturbe]
+    const familiaSimples = [FamiliaSimples, almofada, naoPerturbe]
+    const casalSimples = [CasalSimples, almofada, naoPerturbe]
+    const solterioMais = [SolteiroMais, almofada, naoPerturbe]
+    const solterioSimples = [Solteiro, almofada, naoPerturbe]
 
     const [modalAberto, setModalAberto] = useState(false)
 
@@ -25,7 +31,7 @@ export default function VincularAcomodacao() {
             {acomodacao == "FamiliaSuper" &&
                 <div className='informacoes'>
                     <div className='dados'>
-                        <Titulo texto="Família Super" />
+                    <Titulo texto="Família Super" acomodacao={true} />
                         <p>Acomodação composta por:</p>
                         <ul>
                             <li>Cama solteiro: 6</li>
@@ -41,7 +47,7 @@ export default function VincularAcomodacao() {
             {acomodacao == "FamiliaMais" &&
                 <div className='informacoes'>
                     <div className='dados'>
-                        <Titulo texto="Família Mais" />
+                        <Titulo texto="Família Mais" acomodacao={true} />
                         <p>Acomodação composta por:</p>
                         <ul className='listagemAcomodacoes'>
                             <li>Cama solteiro: 5</li>
@@ -57,7 +63,7 @@ export default function VincularAcomodacao() {
             {acomodacao == "FamiliaSimples" &&
                 <div className='informacoes'>
                     <div className='dados'>
-                        <Titulo texto="Família Simples" />
+                        <Titulo texto="Família Simples" acomodacao={true}/>
                         <p>Acomodação composta por:</p>
                         <ul className='listagemAcomodacoes'>
                             <li>Cama solteiro: 2</li>
@@ -73,7 +79,7 @@ export default function VincularAcomodacao() {
             {acomodacao == "CasalSimples" &&
                 <div className='informacoes'>
                     <div className='dados'>
-                        <Titulo texto="Casal Simples" />
+                        <Titulo texto="Casal Simples" acomodacao={true}/>
                         <p>Acomodação composta por:</p>
                         <ul className='listagemAcomodacoes'>
                             <li>Cama solteiro: 0</li>
@@ -89,7 +95,7 @@ export default function VincularAcomodacao() {
             {acomodacao == "SolteiroMais" &&
                 <div className='informacoes'>
                     <div className='dados'>
-                        <Titulo texto="Solteiro Mais" />
+                        <Titulo texto="Solteiro Mais" acomodacao={true}/>
                         <p>Acomodação composta por:</p>
                         <ul className='listagemAcomodacoes'>
                             <li>Cama solteiro: 0</li>
@@ -105,7 +111,7 @@ export default function VincularAcomodacao() {
             {acomodacao == "SolteiroSimples" &&
                 <div className='informacoes'>
                     <div className='dados'>
-                        <Titulo texto="Solterio Simples" />
+                        <Titulo texto="Solterio Simples" acomodacao={true}/>
                         <p>Acomodação composta por:</p>
                         <ul className='listagemAcomodacoes'>
                             <li>Cama solteiro: 1</li>

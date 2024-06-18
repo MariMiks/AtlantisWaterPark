@@ -1,3 +1,45 @@
+.tituloModal {
+    text-align: center;
+}
+
+.formUsuario {
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inputMdal>input,
+.inputMais>input,
+.inputMdal>select,
+.documentoModal>input {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 5px;
+    border: solid 0.5 var(--azulHover);
+    background-color: var(--azulClaro);
+}
+
+.enderecoInputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.documentoModal .inputMais {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.btnContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
 .modalBtn {
     cursor: pointer;
     padding: 10px;
@@ -6,7 +48,11 @@
     background-color: var(--azulClaro);
 }
 
-.modalBtn:hover{
+.modalBtn:hover {
+    background-color: var(--azulHover);
+}
+
+.modalBtn .mais {
     background-color: var(--azulHover);
 }
 

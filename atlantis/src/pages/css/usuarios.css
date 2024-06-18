@@ -36,6 +36,10 @@
     background-color: var(--azulHover);
 }
 
+.usuario .dados{
+    width: 100%;
+}
+
 .usuario .icones {
     display: flex;
     align-items: center;
@@ -48,4 +52,31 @@
     all: unset;
     cursor: pointer;
     outline: revert;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btnContainer>button {
+    cursor: pointer;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--azulClaro);
+}
+
+.btnContainer>button:hover {
+    background-color: var(--azulHover);
+}
+
+#deletar {
+    background-color: var(--vermelho);
+}
+
+#deletar:hover {
+    background-color: var(--vermelhoHover);
 }
