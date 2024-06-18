@@ -1,15 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './pages/home';
+import NavbarFooter from './pages/navbarFooter';
+import Usuario from './pages/usuarios';
+import VincularAcomodacao from './pages/vincularAcomodacao';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<NavbarFooter />}>
+          <Route index element={<Home />} />
+          <Route path='/usuario' element={<Usuario />} />
+          <Route path='/vincularAcomodacao' element={<VincularAcomodacao />} />
+        </Route>
+        <Route path='*' element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;

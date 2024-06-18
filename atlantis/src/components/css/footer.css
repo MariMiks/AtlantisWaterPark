@@ -1,0 +1,11 @@
+.footer-container{
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    bottom: 0;
+    background-color: var(--azulClaro);
+}
+
+.footer-container>p {
+    text-align: center;
+}
