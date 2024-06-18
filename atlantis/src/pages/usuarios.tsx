@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './css/usuarios.css'
-import Modal from 'react-modal'
 import Titulo from '../components/Titulo'
 import { FaPen, FaTrash } from 'react-icons/fa'
 import TitularModal from '../components/TitularModal'

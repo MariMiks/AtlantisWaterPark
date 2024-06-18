@@ -10,11 +10,12 @@ export default function Home() {
                 <p>Bem-vindo(a) ao <span>melhor</span> sistema de gestão de <span>clubes</span>, <span>hotéis</span> e <span>resorts</span> do mundo, o <span>Atlantis</span> :)</p>
             </div>
             <div className='acomodacoes'>
-                <p>Conheça as nossas acomodações:</p>
+                <h3>Conheça as nossas acomodações:</h3>
                 <div className='cards'>
                     <AcomodacaoCard 
                         img={ocean}
-                        nome="Família Super"
+                        titulo="Família Super"
+                        nome="FamiliaSuper"
                         camaSolteiro="6"
                         camaCasal="2"
                         suite="3"
@@ -23,7 +24,8 @@ export default function Home() {
                     />
                     <AcomodacaoCard 
                         img={ocean}
-                        nome="Família Mais"
+                        titulo="Família Mais"
+                        nome="FamiliaMais"
                         camaSolteiro="5"
                         camaCasal="1"
                         suite="2"
@@ -32,7 +34,8 @@ export default function Home() {
                     />
                     <AcomodacaoCard 
                         img={ocean}
-                        nome="Família Simples"
+                        titulo="Família Simples"
+                        nome="FamiliaSimples"
                         camaSolteiro="2"
                         camaCasal="1"
                         suite="1"
@@ -41,7 +44,8 @@ export default function Home() {
                     />
                     <AcomodacaoCard 
                         img={ocean}
-                        nome="Casal Simples"
+                        titulo="Casal Simples"
+                        nome="CasalSimples"
                         camaSolteiro="0"
                         camaCasal="1"
                         suite="1"
@@ -50,7 +54,8 @@ export default function Home() {
                     />
                     <AcomodacaoCard 
                         img={ocean}
-                        nome="Solteiro Mais"
+                        titulo="Solteiro Mais"
+                        nome="SolteiroMais"
                         camaSolteiro="0"
                         camaCasal="1"
                         suite="1"
@@ -59,7 +64,8 @@ export default function Home() {
                     />
                     <AcomodacaoCard 
                         img={ocean}
-                        nome="Solteiro Simples"
+                        titulo="Solteiro Simples"
+                        nome="SolteiroSimples"
                         camaSolteiro="1"
                         camaCasal="0"
                         suite="1"

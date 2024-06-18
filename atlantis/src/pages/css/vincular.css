@@ -1,0 +1,51 @@
+.informacoes {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 200px;
+    margin-top: 2%;
+}
+
+.vincular-container>h3{
+    margin: 2% 10% 0 10%;
+    font-size: larger;
+}
+
+.vincularCliente{
+    margin: 2% 10%;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #E8EEFF;
+}
+
+.cadastrarNovo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.cadastrarNovo .cadastroBtn {
+    all: unset;
+    cursor: pointer;
+    width: fit-content;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--azulClaro);
+}
+
+.cadastrarNovo .cadastroBtn:hover{
+    background-color: var(--azulHover);
+}
+
+.vincularCliente .divisoria {
+    margin: 2% 10%;
+    border-bottom: var(--azulVibrante) solid 1px;
+}
+
+.listagem>h3{
+    margin-bottom: 2%;
+}

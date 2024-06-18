@@ -1,3 +1,10 @@
 .titulo-container{
-    font-size: x-large;
+    width: 20%;
+    background-color: red;
+}
+
+.abaixoTitulo {
+    width: 100%;
+    height: 30px;
+    background-color: var(--azulClaro);
 }

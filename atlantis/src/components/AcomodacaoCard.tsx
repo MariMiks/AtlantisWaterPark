@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom"
 import "./css/acomodacaoCard.css"
+import { ReactEventHandler, useState } from "react"
 
 export default function AcomodacaoCard(props: any) {
+    const localNomeAcomodacao = () => {
+       localStorage.setItem("acomodacao", props.nome)
+    }
+
     return(
         <div className="card-container">
-            <Link to={"/vincularAcomodacao"}>
+            <Link to={"/vincularAcomodacao"} onClick={localNomeAcomodacao}>
                 <img src={props.img} alt={props.nome} />
                 <div className="imgHover">
                     <ul>
@@ -16,7 +21,7 @@ export default function AcomodacaoCard(props: any) {
                     </ul>
                 </div>
                 <div className="titulo">
-                    <p>{props.nome}</p>
+                    <p>{props.titulo}</p>
                 </div> 
             </Link>
         </div>
