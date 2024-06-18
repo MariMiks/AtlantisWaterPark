@@ -1,6 +1,9 @@
 :root{
     --azulClaro: #BACDFE;
     --azulVibrante: #0047FF;
+    --azulHover: #003acd4f;
+    --vermelho: #ff5b5b4f;
+    --vermelhoHover: #f8000086;
 }
 
 *, 

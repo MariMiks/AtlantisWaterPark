@@ -1,0 +1,51 @@
+.usuario-container {
+    margin: 5%;
+}
+
+.usuario-container .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+
+.usuario-container .header select {
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--azulClaro);
+}
+
+.usuario-container .header button {
+    cursor: pointer;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--azulClaro);
+}
+
+.listagem .usuario {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--azulClaro);
+}
+
+.listagem .usuario:hover{
+    cursor: pointer;
+    background-color: var(--azulHover);
+}
+
+.usuario .icones {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 20%;
+    gap: 20px;
+}
+
+.icones button {
+    all: unset;
+    cursor: pointer;
+    outline: revert;
+}
