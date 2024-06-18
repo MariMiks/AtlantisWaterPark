@@ -3,9 +3,10 @@
 > Aluna: Mariana Izumi - 3DSM
 
 Nesta lista foi implementado os seguintes requisitos:
-- CRUD de cliente titulares e dependentes.
-- Listagem de clientes dependentes para um titular específico.
--  Listagem do titular para o cliente dependente específico.
+- Implementar todas as classes diretoras responsáveis por criar cada tipo de
+acomodação.
+- Implementar as estruturas de dados e a lógica necessária para controlar a hospedagem,
+ou seja, poder registar hospedes e vincula-los a algum tipo de acomodação.
 
 ## Organização
 Segue abaixo a estrutura deste projeto ordenado por ordem das pastas:
@@ -14,6 +15,8 @@ Segue abaixo a estrutura deste projeto ordenado por ordem das pastas:
         -  **ts**: todos os arquivos em typescript
             - **abstracoes**: variáveis para o funcionamento da aplicação enquanto está rodando
             - **app**: arquivo principal para rodar o projeto
+            - **construtores**: contrutores para classes
+            - **diretores**: classes diretoras das acomodações
             - **dominio**: banco de dados temporário
             - **enumeracoes**: listagem de tipagens
             - **impressores**: todos os impressores
