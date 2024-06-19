@@ -23,8 +23,15 @@ Segue abaixo a estrutura deste projeto ordenado por ordem das pastas:
 > - pacote node de typescript: ```npm install -g typescript```
 
 Após clonar o repositório, seguir as seguintes instruções:
-1. No seu console de preferência se dirija ao seguinte diretório: \tecnicas-programacaoII\atlantis
-    - ```cd .\atlantis\```
-1. Instale todas as dependências prescritas no package.json
-    - ```npm i```
-1. Rode a aplicação: ```npm start```
+- Rodar o Backend:
+    1. No seu console de preferência se dirija ao seguinte diretório:
+        - ```cd .\backend```
+    1. Rodar o sistema: ```node .\index.js```
+
+
+- Rodar o Frontend:
+    1. No seu console de preferência se dirija ao seguinte diretório: \tecnicas-programacaoII\frontend\atlantis
+        - ```cd .\frontend\atlantis\```
+    1. Instale todas as dependências prescritas no package.json
+        - ```npm i```
+    1. Rode a aplicação: ```npm start```
