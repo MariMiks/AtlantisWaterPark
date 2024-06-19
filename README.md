@@ -10,6 +10,9 @@ Repositório para armazenar todas as listas elaboradas para a matéria Técnicas
 ## Organização
 Cada branch equivale a uma lista.
 
-1. atvI-atlantis
-1. atvII-atlantis
+1. atvI
+1. atvII
+2. atvIII
+3. atvIV
+4. atvV
 
